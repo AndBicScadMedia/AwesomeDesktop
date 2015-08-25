@@ -103,7 +103,7 @@ end
 
 tags = 	{
 	names = { "➊", "➋", "➌", "➍", "➎", "➏", "➐", "➑", "➒" },
-	layout = { layouts[10], layouts[7], layouts[2], layouts[4], layouts[4], layouts[5], layouts[10], layouts[1], layouts [1] }
+	layout = { layouts[10], layouts[7], layouts[8], layouts[4], layouts[4], layouts[5], layouts[10], layouts[1], layouts [1] }
 		}
 for s = 1, screen.count() do
 	tags[s] = awful.tag(tags.names, s, tags.layout)
@@ -213,7 +213,7 @@ for s = 1, screen.count() do
     mytasklist[s] = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, mytasklist.buttons)
 
     -- Create the wibox
-    mywibox[s] = awful.wibox({ position = "top", screen = s, height = 22 })
+    mywibox[s] = awful.wibox({ position = "top", screen = s, height = 28 })
 
     -- Widgets that are aligned to the left
     local left_layout = wibox.layout.fixed.horizontal()
@@ -275,7 +275,7 @@ for s = 1, screen.count() do
     mywibox[s]:set_widget(layout)
 
     -- Create the bottom wibox
-    mybottomwibox[s] = awful.wibox({ position = "bottom", screen = s, height = 22 })
+    mybottomwibox[s] = awful.wibox({ position = "bottom", screen = s, height = 28 })
 
     -- Widgets that are aligned to the bottom left
     bottom_left_layout = wibox.layout.fixed.horizontal()
@@ -446,6 +446,7 @@ globalkeys = awful.util.table.join(
 	awful.key({ modkey }, "e", function () awful.util.spawn( "thunar") end),
 	awful.key({ modkey }, "g", function () awful.util.spawn( "gvim") end),
 	awful.key({ altkey }, "z", function () awful.util.spawn( "pkill youtube-viewer") end),
+	awful.key({ altkey }, "x", function () awful.util.spawn( "pkill mpv") end),
 
     -- Prompt
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),

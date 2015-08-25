@@ -206,7 +206,7 @@ vicious.register(pianobarwidget, vicious.widgets.mpd,
 		return markup(gray, band)
     elseif play_or_pause == "1" then
         pianobarwidget.width = 0
-		return markup(blue, band) .. markup(gray, " ") .. markup(green, song)
+		return markup(blue, band) .. markup(gray, "  -  ") .. markup(green, song)
     else
       	-- Stopped
       	pianobarwidget.width = 0
