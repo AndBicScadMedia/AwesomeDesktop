@@ -438,6 +438,7 @@ globalkeys = awful.util.table.join(
 	awful.key({ modkey }, "v", function () awful.util.spawn( "kodi") end),
 	awful.key({ modkey }, "T", function () awful.util.spawn( "turpial") end),
 	awful.key({ modkey }, "o", function () awful.util.spawn( "libreoffice") end),
+	awful.key({ modkey, "Shift" }, "b", function () awful.util.spawn( "firefox") end),
 	awful.key({ modkey }, "c", function () awful.util.spawn( "chromium") end),
 	awful.key({ modkey }, "i", function () awful.util.spawn( "chromium -incognito") end),
 	awful.key({ modkey }, "p", function () awful.util.spawn( "pavucontrol") end),
